@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deaths Table View Controller-->
+        <scene sceneID="pfm-5h-TSM">
+            <objects>
+                <tableViewController id="nEm-La-KNB" customClass="DeathsTableViewController" customModule="TheBreakinBad" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AR9-G2-N8H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reusableEpisode" rowHeight="89" id="pc6-Rh-jdC">
+                                <rect key="frame" x="0.0" y="28" width="414" height="89"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pc6-Rh-jdC" id="Lhe-c0-xhx">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Klick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2e-W6-AKw">
+                                            <rect key="frame" x="20" y="17" width="355" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="GOl-t6-yFT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-lJ-HEY">
+                                            <rect key="frame" x="20" y="46" width="355" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="nHn-NG-AeH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HSg-lJ-HEY" firstAttribute="top" secondItem="m2e-W6-AKw" secondAttribute="bottom" constant="8" id="1Nj-BD-s4p"/>
+                                        <constraint firstItem="m2e-W6-AKw" firstAttribute="leading" secondItem="Lhe-c0-xhx" secondAttribute="leadingMargin" id="T5l-xd-9am"/>
+                                        <constraint firstItem="m2e-W6-AKw" firstAttribute="trailing" secondItem="Lhe-c0-xhx" secondAttribute="trailingMargin" id="ZQp-Vz-7NZ"/>
+                                        <constraint firstItem="HSg-lJ-HEY" firstAttribute="trailing" secondItem="Lhe-c0-xhx" secondAttribute="trailingMargin" id="arW-iB-fgZ"/>
+                                        <constraint firstItem="m2e-W6-AKw" firstAttribute="top" secondItem="Lhe-c0-xhx" secondAttribute="topMargin" constant="6" id="iPi-wB-eBk"/>
+                                        <constraint firstItem="HSg-lJ-HEY" firstAttribute="leading" secondItem="Lhe-c0-xhx" secondAttribute="leadingMargin" id="vB7-se-uNP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="episodeNameLabel" destination="m2e-W6-AKw" id="KVl-PW-QbH"/>
+                                    <outlet property="seasonLabel" destination="HSg-lJ-HEY" id="AO7-am-yGs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nEm-La-KNB" id="Ulz-A9-lFN"/>
+                            <outlet property="delegate" destination="nEm-La-KNB" id="an6-3y-zr7"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8e-jy-13W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.78260869565219" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

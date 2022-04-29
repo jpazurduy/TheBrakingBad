@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="WfD-6v-BmC">
+            <objects>
+                <tableViewController storyboardIdentifier="genericDetail" id="HWp-Jq-jS4" customClass="DetailViewController" customModule="TheBreakinBad" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="REI-yP-nhe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusableCell" id="lwu-Ba-eff" customClass="DetailTableViewCell" customModule="TheBreakinBad" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="23"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lwu-Ba-eff" id="gfZ-uR-jIP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="23"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etb-f3-8QC">
+                                            <rect key="frame" x="20" y="11" width="150" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="GZC-45-lGA"/>
+                                                <constraint firstAttribute="width" constant="150" id="nvY-la-zgy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMz-ok-Nq4">
+                                            <rect key="frame" x="175" y="11" width="219" height="0.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="etb-f3-8QC" firstAttribute="top" secondItem="gfZ-uR-jIP" secondAttribute="topMargin" id="3Fa-vB-TFG"/>
+                                        <constraint firstAttribute="bottom" secondItem="yMz-ok-Nq4" secondAttribute="bottom" constant="11.5" id="6a9-I8-mwg"/>
+                                        <constraint firstItem="etb-f3-8QC" firstAttribute="leading" secondItem="gfZ-uR-jIP" secondAttribute="leadingMargin" id="7Bk-vT-4Be"/>
+                                        <constraint firstItem="yMz-ok-Nq4" firstAttribute="leading" secondItem="etb-f3-8QC" secondAttribute="trailing" constant="5" id="8OW-bM-bnI"/>
+                                        <constraint firstItem="yMz-ok-Nq4" firstAttribute="top" secondItem="gfZ-uR-jIP" secondAttribute="top" constant="11" id="B4z-V3-54M"/>
+                                        <constraint firstAttribute="trailing" secondItem="yMz-ok-Nq4" secondAttribute="trailing" constant="20" id="Svb-kK-5fc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="desc" destination="yMz-ok-Nq4" id="ubd-Tm-7Zo"/>
+                                    <outlet property="label" destination="etb-f3-8QC" id="uuf-AM-8yC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HWp-Jq-jS4" id="YXh-6M-0kM"/>
+                            <outlet property="delegate" destination="HWp-Jq-jS4" id="xgk-mL-D3K"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4pz-Tc-2LX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.84057971014494" y="-48.214285714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
